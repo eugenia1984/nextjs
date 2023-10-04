@@ -1,6 +1,6 @@
-# <img width="48" height="48" src="https://img.icons8.com/color/48/nextjs.png" alt="nextjs"/> N       extjs
+# <img width="48" height="48" src="https://img.icons8.com/color/48/nextjs.png" alt="nextjs"/> Nextjs
 
-The **Fernando Herrera**'s **Udemy** course of:  <img width="20" height="20" src="https://img.icons8.com/color/20/nextjs.png" alt="nextjs"/> **Nextjs**.
+The **Fernando Herrera**'s **Udemy** course of:  **Nextjs** <img width="20" height="20" src="https://img.icons8.com/color/20/nextjs.png" alt="nextjs"/>.
 
 ## What I saw?
 
