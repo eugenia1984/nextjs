@@ -35,7 +35,6 @@ The **Fernando Herrera**'s **Udemy** course of:  **Nextjs** <img width="20" heig
 
 ## Features📢
 
-✔️ 
 
 🔜 I practise with some courses:
 
