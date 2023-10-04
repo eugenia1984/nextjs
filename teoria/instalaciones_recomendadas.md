@@ -9,20 +9,25 @@
 ✔️  [Mongo Compass](https://www.mongodb.com/try/download/compass)
 
 ✔️  [Git](https://git-scm.com/)
+
 ```
 git config --global user.name "Tu nombre"
 git config --global user.email "Tu correo"
 ```
 
-* [Node](https://nodejs.org/es/)
+✔️ [Node](https://nodejs.org/es/)
 
-``` opcional - Yarn
-npm install --global yarn
-```
 
-* [Google Chrome](https://www.google.com.mx/intl/es-419/chrome/?brand=CHBD&gclid=Cj0KCQiAtrnuBRDXARIsABiN-7AAMm13Ae3KDIib46Laxfe6tzD_w4yvDdpq5XsPw1eNlOkZ_0-3x3IaAvLEEALw_wcB&gclsrc=aw.ds)
+-> Fernando prefiere utilizar **yarn** para **dependencias locales** y **npm** con **independencias globales**, si queremos hacer como el lo instalamos, sino cuando el pone yarn usamos `npm`
 
-*  [React DevTools](https://react.dev/learn/react-developer-tools)
+
+opcional - para instalar Yarn, de modo global: `npm install --global yarn`. Para corroborar que se instaló: `yarn --version`
+
+✔️ npm, para corroborar que este, luego de instalar node: `npm --version`
+
+✔️ [Google Chrome](https://www.google.com.mx/intl/es-419/chrome/?brand=CHBD&gclid=Cj0KCQiAtrnuBRDXARIsABiN-7AAMm13Ae3KDIib46Laxfe6tzD_w4yvDdpq5XsPw1eNlOkZ_0-3x3IaAvLEEALw_wcB&gclsrc=aw.ds)
+
+✔️ [React DevTools](https://react.dev/learn/react-developer-tools)
 
 * [Docker Desktop](https://www.docker.com/get-started)
 

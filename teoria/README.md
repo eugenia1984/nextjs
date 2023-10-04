@@ -2,4 +2,4 @@
 
 ## <img width="30" height="30" src="https://img.icons8.com/stickers/30/test-results.png" alt="test-results"/> Temas
 
-- Instalaciones recomendadas
+- [Instalaciones recomendadas](https://github.com/eugenia1984/nextjs/blob/main/teoria/instalaciones_recomendadas.md)
