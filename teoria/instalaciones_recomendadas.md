@@ -1,6 +1,6 @@
 # Instalaciones recomendadas - Curso de Next.js
 
-## Instalaciones Necesarias
+## <img width="20" height="20" src="https://img.icons8.com/stickers/20/maintenance.png" alt="maintenance"/> Instalaciones Necesarias
 
 ✔️  [Visual Studio Code](https://code.visualstudio.com/)
 
@@ -39,7 +39,7 @@ Verificar con : `docker --version` y `docker-compose --version`. Una vez que en 
 
 ---
 
-## Extensiones de VSCode
+## <img width="20" height="20" src="https://img.icons8.com/color/20/visual-studio-code-2019.png" alt="visual-studio-code-2019"/> Extensiones de VSCode
 
 ✔️ [Activitus Bar](https://marketplace.visualstudio.com/items?itemName=Gruntfuggly.activitusbar), para que aparezca la barrita de abajo
 
@@ -60,13 +60,16 @@ Verificar con : `docker --version` y `docker-compose --version`. Una vez que en 
 
 ---
 
-### Tema que estoy usando en VSCode:
+### <img width="20" height="20" src="https://img.icons8.com/color/20/visual-studio-code-2019.png" alt="visual-studio-code-2019"/>  Tema que estoy usando en VSCode:
 
 ✔️ [Tokyo Night](https://marketplace.visualstudio.com/items?itemName=enkia.tokyo-night)
 
 ✔️ [Iconos](https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme)
 
-### Instalaciones adicionales
+
+---
+
+### <img width="20" height="20" src="https://img.icons8.com/office/20/maintenance.png" alt="maintenance"/> Instalaciones adicionales
 
 ✔️ [NextJs Snippets](https://marketplace.visualstudio.com/items?itemName=willstakayama.vscode-nextjs-snippets)
 
@@ -83,3 +86,5 @@ Verificar con : `docker --version` y `docker-compose --version`. Una vez que en 
 ✔️ [CSS Modules](https://marketplace.visualstudio.com/items?itemName=clinyong.vscode-css-modules), ajuda a trabajar en los componentes de react y recomeinda clases de CSS como objetos literales de javaScript
 
 ✔️ [.env](https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv), para ver bonito los archivos de configuración de variables de entornos
+
+---

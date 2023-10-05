@@ -83,11 +83,15 @@ Would you like to cutomize the default import alias? No
 
 ```
 >.next
+> components
 > node_modules
 > pages
+  > contact
+     index.tsx
   > api
   _app.tsx
   _document.tsx
+  about.tsx
   index.tsx
 > public
 > styles
@@ -102,6 +106,7 @@ yarn.lock
 
 - **.next**, por defecto esta invisible(oculta). Si al clonar un proyecto no vemos este archivo hay que correr `yarn dev` para inciializarlo y que se cree, sin este archivo no se puede renderizar la aplicación, siempre que estemos en **Desarrollo**, esto no pasa si ya hacemos el **build**
 
+- **components** donde van a estar todos mis componentes
 
 - **node_modules**, no todos llegan a la versión de producción, algunos son para path refresh que se usan en desarrollo, peor luego no llegan a la versión de producción. Por eso se incluye siempre en el .gitignore
 

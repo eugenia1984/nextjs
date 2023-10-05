@@ -1,0 +1,8 @@
+.menu-container {
+  display: flex;
+  gap: 6px;
+  margin: 8px;
+}
+.menu-container a {
+  list-style: none;
+}
