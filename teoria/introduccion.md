@@ -56,14 +56,19 @@ REcomienda ver su video de YouTube [React + TypeScript: Crear aplicación de Rea
 
 ## Cambios en NEXT.js 13.4
 
+¿Cómo inicializarlo?
 
-Con los recientes cambios que trajo la version **13.4** de NEXT.js (App Router ahora es estable), hubo cambios importantes a tener en cuenta al crear un nuevo proyecto.
+- Trabajando con **npm**: `npx create-next-app@latest`
+
+- Trabajando con **yarn**: `yarn create next-app`
+
+-> Con los recientes cambios que trajo la version **13.4** de NEXT.js (App Router ahora es estable), hubo cambios importantes a tener en cuenta al crear un nuevo proyecto.
 
 Les recomendamos seleccionar las siguientes opciones para crear el proyecto lo más parecido a lo visto en el curso:
 
 ```
-What is your project named? test-ap
-Would you like to use TypeScript witj thie project? Yes
+What is your project named? initial-demo
+Would you like to use TypeScript with the project? Yes
 Would you like to use ESLint with this project? YEs
 Would you like to use Tailwind CSS with this project? No
 Would you like to use `src/` directory with this project? No
@@ -71,6 +76,7 @@ Use App Router (recomended)? No
 Would you like to cutomize the default import alias? No
 ```
 
+- Entro al proyecto creado y para correr la aplicación: `yarn dev` y lo puedo ver en : [ http://localhost:3000]( http://localhost:3000)
 
 ---
 ### 3 - Exposición sobre cada archivo y directorio
