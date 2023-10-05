@@ -1,4 +1,4 @@
-# <img width="20" height="20" src="https://img.icons8.com/color/20/nextjs.png" alt="nextjs"/> introducción a Next.js
+# <img width="20" height="20" src="https://img.icons8.com/color/20/nextjs.png" alt="nextjs"/> Introducción a Next.js
 
 ## ¿ Qué se ve?
 
@@ -28,7 +28,7 @@ Ahora se cuenta con el **Sever-Side Rendering** y/o **generación estática**, y
 
 - **DR**: Dynamic Routing
 
-Una SPA funciona así:
+- Una SPA funciona así:
 
 1. El usuario entra a un URL el cual inicia la primera solisitud (**Request**)
 
@@ -44,11 +44,35 @@ Pero quizá, el peor panorama es que **no es SEO friendly** (SEO = Search Engine
 
 ¿Por qué es tan importante el SEO? El impacto que tienes en la red.
 
+- NEXT.js es un Framework poderoso para servir contenido estático y generado desde el lado del servidor.
 
 ---
 
 ### 2 - Crear nuestro primer proyecto
 
+En el curso se parte con nivel de 0 conocimiento de [NEXT.js](https://nextjs.org/) pero se entiende que ya se tiene conocimineto de REACT, como los **hooks**.
+
+REcomienda ver su video de YouTube [React + TypeScript: Crear aplicación de React con Typescript](https://www.youtube.com/watch?v=dNxaP_BTtwQ&ab_channel=FernandoHerrera).
+
+## Cambios en NEXT.js 13.4
+
+
+Con los recientes cambios que trajo la version **13.4** de NEXT.js (App Router ahora es estable), hubo cambios importantes a tener en cuenta al crear un nuevo proyecto.
+
+Les recomendamos seleccionar las siguientes opciones para crear el proyecto lo más parecido a lo visto en el curso:
+
+```
+What is your project named? test-ap
+Would you like to use TypeScript witj thie project? Yes
+Would you like to use ESLint with this project? YEs
+Would you like to use Tailwind CSS with this project? No
+Would you like to use `src/` directory with this project? No
+Use App Router (recomended)? No
+Would you like to cutomize the default import alias? No
+```
+
+
+---
 ### 3 - Exposición sobre cada archivo y directorio
 
 ### 4 - Componentes propios de Next (Link, Head)
