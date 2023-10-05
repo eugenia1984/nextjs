@@ -28,6 +28,12 @@ The **Fernando Herrera**'s **Udemy** course of:  **Nextjs** <img width="20" heig
 
 ---
 
+## Theory
+
+[Link](https://github.com/eugenia1984/nextjs/tree/main/teoria), it´s in Spanish
+
+---
+
 ## Demo📦
 
 
