@@ -15,6 +15,6 @@ const style = {
 export const ActiveLink: React.FC<ActiveLinkPorps> = ({ text, to }) => {
   const { asPath } = useRouter()
   return (
-    <Link href={ to }><span style={ asPath === to ? style : null }>{ text }</span></Link>
+    <Link href={ to }><span style={ asPath === to ? style : {}  }>{ text }</span></Link>
   )
 }
