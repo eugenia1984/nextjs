@@ -1,8 +1,8 @@
-# <img width="20" height="20" src="https://img.icons8.com/color/20/nextjs.png" alt="nextjs"/> Introducción a Next.js
+# <img width="30" height="30" src="https://img.icons8.com/color/30/nextjs.png" alt="nextjs"/> Introducción a Next.js
 
-## ¿ Qué se ve?
+## <img width="20" height="20" src="https://img.icons8.com/3d-fluency/20/eyes-1.png" alt="eyes-1"/> ¿ Qué se ve?
 
-### 1 - ¿ Qué es NEXT.js?
+### <img width="20" height="20" src="https://img.icons8.com/color/20/nextjs.png" alt="nextjs"/> 1 - ¿ Qué es NEXT.js?
 
 - Es un **Framework** poderoso para servir contenido estático y generado desde el lado del servidor.
 
@@ -48,13 +48,13 @@ Pero quizá, el peor panorama es que **no es SEO friendly** (SEO = Search Engine
 
 ---
 
-### 2 - Crear nuestro primer proyecto
+### <img width="20" height="20" src="https://img.icons8.com/fluency/20/project-management.png" alt="project-management"/> 2 - Crear nuestro primer proyecto
 
 En el curso se parte con nivel de 0 conocimiento de [NEXT.js](https://nextjs.org/) pero se entiende que ya se tiene conocimineto de REACT, como los **hooks**.
 
-REcomienda ver su video de YouTube [React + TypeScript: Crear aplicación de React con Typescript](https://www.youtube.com/watch?v=dNxaP_BTtwQ&ab_channel=FernandoHerrera).
+Recomienda ver su video de YouTube [React + TypeScript: Crear aplicación de React con Typescript](https://www.youtube.com/watch?v=dNxaP_BTtwQ&ab_channel=FernandoHerrera).
 
-## Cambios en NEXT.js 13.4
+#### Cambios en NEXT.js 13.4
 
 ¿Cómo inicializarlo?
 
@@ -79,7 +79,7 @@ Would you like to cutomize the default import alias? No
 - Entro al proyecto creado y para correr la aplicación: `yarn dev` y lo puedo ver en: [ http://localhost:3000]( http://localhost:3000)
 
 ---
-### 3 - Exposición sobre cada archivo y directorio
+### <img width="20" height="20" src="https://img.icons8.com/color/20/folders-group.png" alt="folders-group"/> 3 - Exposición sobre cada archivo y directorio
 
 ```
 >.next
@@ -135,7 +135,7 @@ name: "John Doe"
 
 ---
 
-### 4 - Componentes propios de Next (Link, Head)
+### <img width="20" height="20" src="https://img.icons8.com/emoji/20/link-emoji.png" alt="link-emoji"/> 4 - Componentes propios de Next (Link, Head)
 
 
 - Es el `<head>` del HTML5, por esto es SEO friendly.
@@ -245,26 +245,26 @@ Por defecto lo hace en **Static generation**.
 
 ---
 
-### 5 - Módulos de CSS y estilos globales
+### <img width="20" height="20" src="https://img.icons8.com/color/20/css3.png" alt="css3"/> 5 - Módulos de CSS y estilos globales
 
 ---
 
-### 6 - Páginas
+### <img width="20" height="20" src="https://img.icons8.com/color/20/open-book--v1.png" alt="open-book--v1"/> 6 - Páginas
 
 ---
 
-### 7 - API generadas por defecto
+### <img width="20" height="20" src="https://img.icons8.com/color/20/api.png" alt="api"/> 7 - API generadas por defecto
 
 ---
 
-### 8 - Aplicar estilos basados en rutas
+### <img width="20" height="20" src="https://img.icons8.com/fluency/20/anchor-nodes.png" alt="anchor-nodes"/> 8 - Aplicar estilos basados en rutas
 
 ---
 
-### 9 - Layouts
+### <img width="20" height="20" src="https://img.icons8.com/stickers/20/channel-mosaic.png" alt="channel-mosaic"/> 9 - Layouts
 
 ---
 
-### 10 - Layouts anidados
+### <img width="20" height="20" src="https://img.icons8.com/office/20/channel-mosaic.png" alt="channel-mosaic"/> 10 - Layouts anidados
 
 ---
