@@ -5,21 +5,20 @@ import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function About() {
   return (
     <>
       <Head>
-        <title>Home</title>
-        <meta name="description" content="Home Page" />
+        <title>About</title>
+        <meta name="description" content="About Page" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="keywords" content="next.js, typescript, react"/>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={ `${ styles.main } ${ inter.className }` }>
-        <h1><Link href="/">Home</Link></h1>
+        <h1>About</h1>
         <ul>
-          <li>Ir a <Link href="/about">About</Link></li>
+          <li>Ir a <Link href="/">Home</Link></li>
           <li>Ir a <Link href="/contact">Contact</Link></li>
         </ul>
 

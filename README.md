@@ -4,7 +4,7 @@ The **Fernando Herrera**'s **Udemy** course of:  **Nextjs** <img width="20" heig
 
 ## What I saw?
 
-- Next-js from scratch
+✔️ Next-js from scratch
 
 - Understand how to work with Next + TypeScript
 
@@ -44,7 +44,7 @@ The **Fernando Herrera**'s **Udemy** course of:  **Nextjs** <img width="20" heig
 
 🔜 I practise with some courses:
 
-✔️ **Introduction to Next**: Small exercise for handling generalities of Next.js
+✔️ [**Introduction to Next**](https://github.com/eugenia1984/nextjs/tree/main/01-initial-demo): Small exercise for handling generalities of Next.js
 
 ✔️ **PokemonApp**: Small application for managing ISR and SSG
 

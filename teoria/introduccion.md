@@ -76,21 +76,195 @@ Use App Router (recomended)? No
 Would you like to cutomize the default import alias? No
 ```
 
-- Entro al proyecto creado y para correr la aplicación: `yarn dev` y lo puedo ver en : [ http://localhost:3000]( http://localhost:3000)
+- Entro al proyecto creado y para correr la aplicación: `yarn dev` y lo puedo ver en: [ http://localhost:3000]( http://localhost:3000)
 
 ---
 ### 3 - Exposición sobre cada archivo y directorio
 
+```
+>.next
+> node_modules
+> pages
+  > api
+  _app.tsx
+  _document.tsx
+  index.tsx
+> public
+> styles
+.eslintrc.json
+next-env.d.ts
+next.config.js
+package.json
+README.md
+tsconfig.json
+yarn.lock
+```
+
+- **.next**, por defecto esta invisible(oculta). Si al clonar un proyecto no vemos este archivo hay que correr `yarn dev` para inciializarlo y que se cree, sin este archivo no se puede renderizar la aplicación, siempre que estemos en **Desarrollo**, esto no pasa si ya hacemos el **build**
+
+
+- **node_modules**, no todos llegan a la versión de producción, algunos son para path refresh que se usan en desarrollo, peor luego no llegan a la versión de producción. Por eso se incluye siempre en el .gitignore
+
+- **pages** ahi van a estar las páginas de la aplicación, son componentes funcionales y siempre deben estar **export default function NombreDelFunctionalComponent** (exportador por defecto). La diferencia con React es qeu el componente puede teenr un nombre y el archivo otro. La otra difernecia es que los nombres de los componentes ahora deben estar en **minuscula**, sin espacios, se puede usar `-` ó `_`, y el nombre debe ser el del **path** de la URL, por eso a la principal se la llama **index.tsx**. También tengo el archivo **_app.tsx** que es el **punto central de la aplicación** (Como el App.tsx de React), es útil para ahi aplicar algún **context** que quiero que esté disponible en toda la aplicación, por ejemplo aca puedo armar un `<header>` o un `<footer>`.
+
+La diferencia que notamos es la etiqueta `<Head></Head>` donde tengo las **meta tags** para el titulo que se ve en la ventana del navegafor, el favicon y las description y todas las meta tags que le quiera poner. Esta es la difernecia por la cual tiene **SEO friendly**
+
+Hay una carpeta especial lalmada **API** es una API REST Full ya lista, tenemos el archivo **hello.ts** por lo que si hacemos [http://localhost:3000/api/hello](http://localhost:3000/api/hello), vemos la respuesta JSON:
+
+```
+{
+name: "John Doe"
+}
+```
+
+- **public** con lso favicon o íconos svg, son los recursos estáticos, código que no es compilado, simeplemente es servido. Si no queremos que las imagenes no tengan hashes van aca.
+
+- **styles** con los estilos de mi aplicación, el archivo **glabals.css** se importa como un archivo normal de CSS y se aplica de manera global en la aplicación, en cambio los demás archivos que empiezan en mayúsucla y se nombran: **NOmbre.modules.css** suelen ser los estilos particulares de un componente o página, las clases de estos archivos van a tener hashes. 
+
+- **eslintrc.json** para configurar el ESLinter
+
+- **.gitignore** los archivos que no se suben a GitHub
+
+- **.next.config.js** para cambios específicos de NEXT.js
+
+- **package.json** con el **nombre** de la aplicación, los **scripts** para poder correrla, compilarla, hacer el build, tenemos las **dependencias**
+
+- **README.md** donde se puede dejar anotado las configuraciones necesarias por si clonan el repositorio
+
+- **yarn.lock** nunca tocar este archivo, es como el package-lock.json
+
+---
+
 ### 4 - Componentes propios de Next (Link, Head)
+
+
+- Es el `<head>` del HTML5, por esto es SEO friendly.
+
+```
+<Head>
+  <title>Home</title>
+  <meta name="description" content="Home Page" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="icon" href="/favicon.ico" />
+</Head>
+```
+
+[Documentación de Next.js - Head](https://nextjs.org/docs/pages/api-reference/components/head)
+
+- Con el `<Link>` podemos hacer el client side transition. Next.js versión 13 cambió un poco el componente `<Link>`:
+
+-Antes:
+
+```tsx
+<Link href="/about">
+  <a>About</a>
+</Link>  
+```
+
+-Ahora - ya no es necesrio anadir `<a>` anchor tag manualmente como hijo de Link, el componente `<Link>` siempre crea un anchor tag:
+
+```tsx
+<Link href="/about">
+  About
+</Link>  
+```
+
+Usando `<Link>` evitamos el **refresh**, como el Link de react-router-dom que hace que la aplicación no se recargue. Hace un **pre fetch** de la página, se pre carga antes de renderizarse.
+
+También se le puede enviar un objeto, por ejemplo:
+
+```tsx
+<Link
+  href={{
+    pathname: '/about',
+    query: {name: 'test'}
+  }}
+>
+ About
+</Link> 
+<Link
+  href={{
+    pathname: '/blog/[slug]',
+    query: {slug: 'my-post'}
+  }}
+>
+ Blog Post
+</Link> 
+```
+-> Me crea la ruta: `/about?name=test` y la ruta dinámica: `/blog/my-post`
+
+
+Puede tener **props**:
+
+
+| Prop	| Example	| Type	| Required |
+| href	| href="/dashboard"	| String or Object	| Yes |
+| replace	| replace={false}	| Boolean	| - |
+| scroll	| scroll={false}	| Boolean	| - |
+| prefetch	| prefetch={false}	| Boolean	| - |
+
+-> **Replace**: Defaults to false. When true, next/link will replace the current history state instead of adding a new URL into the browser’s history. 
+
+-Me bloquea la flecha para ir hacia atrás. No se suele utilizar mucho. Un ejemplo de uso es en el Login, si ya se autentico que no regrese al Login.
+
+-> **Scroll**: Defaults to true. The default behavior of `<Link>` is to scroll to the top of a new route or to maintain the scroll position for backwards and forwards navigation. When false, next/link will not scroll to the top of the page after a navigation.
+
+-> **Prefetch**: Defaults to true. When true, next/link will prefetch the page (denoted by the href) in the background. This is useful for improving the performance of client-side navigations. Any `<Link />` in the viewport (initially or through scroll) will be preloaded. Prefetch can be disabled by passing prefetch={false}. Prefetching is only enabled in production.
+
+**Good to know**: `<a>` tag attributes such as className or target="_blank" can be added to `<Link>` as props and will be passed to the underlying `<a>` element.
+
+-> Ejempl ode ruta dinámica:
+
+```javascript
+import Link from 'next/link'
+ 
+function Posts({ posts }) {
+  return (
+    <ul>
+      {posts.map((post) => (
+        <li key={post.id}>
+          <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+        </li>
+      ))}
+    </ul>
+  )
+}
+ 
+export default Posts
+```
+### Static Generation vs. Sever-Side Rendering
+
+
+Next.js trabaja con dos tipos generales de generación:
+
+- **Static Generation**:  el HTML se crea en el momento de **build** (construccion) del sitio y se reutiliza en cada request. Es el contenido estático, que no cambiará.
+
+- **Sever-Side Rendering**: el HTML es generado en cada **request** al cliente.
+
+Por defecto lo hace en **Static generation**.
+
+---
 
 ### 5 - Módulos de CSS y estilos globales
 
+---
+
 ### 6 - Páginas
+
+---
 
 ### 7 - API generadas por defecto
 
+---
+
 ### 8 - Aplicar estilos basados en rutas
+
+---
 
 ### 9 - Layouts
 
+---
+
 ### 10 - Layouts anidados
+
+---
