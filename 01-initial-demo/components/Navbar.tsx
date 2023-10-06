@@ -15,9 +15,9 @@ export default function Navbar() {
   return (
     <nav className={ `${ inter.className }` }>
       <ul className={ styles['menu-container'] }>
-        { menuItems.map(item =>
-          <li key={ item.text }>
-            <ActiveLink text={ item.text } to={ item.href } />
+        { menuItems.map(({text, href}) =>
+          <li key={ href }>
+            <ActiveLink text={ text } to={ href } />
           </li>
         ) }
       </ul>
