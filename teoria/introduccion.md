@@ -252,14 +252,30 @@ Por defecto lo hace en **Static generation**.
 
 ### <img width="20" height="20" src="https://img.icons8.com/color/20/css3.png" alt="css3"/> 5 - Módulos de CSS y estilos globales
 
+Los **Estilos globales** están en **blonals.css**, los estilos que son de una página determinada o de un componente funcional van en módlo, y los nombramos: **Nombre.module.css**, lo importamos igual que el css: `import styles from './Navbar.module.css'` y lo utilizamos en el código.
+
+Cuando tengo clases que son de más de una palabra y están unidas por `-`:
+
+```tsx
+<ul className={ styles['menu-container'] }>
+```
+
 ---
 
 ### <img width="20" height="20" src="https://img.icons8.com/color/20/open-book--v1.png" alt="open-book--v1"/> 6 - Páginas
+
+
+Desde la carpeta **pages**, la primer que se renderiza en la UR `/` es el archivo **index.tsx**, en la misma carpeta puedo crear mis otras paginas, siempre las nombro en minuscula, por ejemplo **about.tsx**,
+
+Todo lo que esta dentro de **pages** termina siendo una parte de la ruta en la URL.
+
+Tenemos la carpeta **api** que es donde vamos a tener lo de la API Rest Full.
 
 ---
 
 ### <img width="20" height="20" src="https://img.icons8.com/color/20/api.png" alt="api"/> 7 - API generadas por defecto
 
+Es la arpeta que ya tenemos dentro de **pages** llamada **api** nos va a quedar la ruta: `http://localhost:3000/api/` + lo que tengamos dentro de api
 ---
 
 ### <img width="20" height="20" src="https://img.icons8.com/fluency/20/anchor-nodes.png" alt="anchor-nodes"/> 8 - Aplicar estilos basados en rutas
@@ -268,8 +284,19 @@ Por defecto lo hace en **Static generation**.
 
 ### <img width="20" height="20" src="https://img.icons8.com/stickers/20/channel-mosaic.png" alt="channel-mosaic"/> 9 - Layouts
 
+Es un componente funcional (simple higher orden component) que recibe un **children**.
+
+No va dentro de **pages** porque lo que hay ahi termina siendo uan ruta de la URL.
+
+Va dentro de **components** en la carpeta **layouts**
 ---
 
 ### <img width="20" height="20" src="https://img.icons8.com/office/20/channel-mosaic.png" alt="channel-mosaic"/> 10 - Layouts anidados
+
+Se crea un Layout dentro de otro Layout, pero queda medio complicado para leer.
+
+Sino usando el PageName.getLayout.
+
+(Documentacion de Next.js)[https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#layout-pattern]
 
 ---

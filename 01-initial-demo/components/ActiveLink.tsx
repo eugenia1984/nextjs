@@ -9,7 +9,7 @@ interface ActiveLinkPorps {
 
 const style = {
   color: '#0070f3',
-  textDecoration: 'underline'
+  fontWeight: '900'
 }
 
 export const ActiveLink: React.FC<ActiveLinkPorps> = ({ text, to }) => {
