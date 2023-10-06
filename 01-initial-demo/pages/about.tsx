@@ -1,5 +1,6 @@
-import DarkLayout from '../components/layouts/DArkLayout'
+import DarkLayout from '../components/layouts/DarkLayout'
 import MainLayout from '../components/layouts/MainLayout'
+
 export default function About() {
   return (
     <MainLayout>
@@ -13,5 +14,6 @@ export default function About() {
         </div>
       </DarkLayout>
     </MainLayout>
+
   )
 }

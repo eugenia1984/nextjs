@@ -4,13 +4,22 @@ import { ActiveLink } from './ActiveLink'
 
 const inter = Inter({ subsets: ['latin'] })
 
+const menuItems = [
+  { text: 'Home', href: '/' },
+  { text: 'About', href: '/about' },
+  { text: 'Contact', href: '/contact' },
+  { text: 'Pricing', href: '/pricing' },
+];
+
 export default function Navbar() {
   return (
     <nav className={ `${ inter.className }` }>
       <ul className={ styles['menu-container'] }>
-        <li><ActiveLink text="Home" to="/" /></li>
-        <li><ActiveLink text="About" to="/about" /></li>
-        <li><ActiveLink text="Contact" to="/contact" /></li>
+        { menuItems.map(item =>
+          <li key={ item.text }>
+            <ActiveLink text={ item.text } to={ item.href } />
+          </li>
+        ) }
       </ul>
     </nav>
   )
