@@ -6,7 +6,7 @@ The **Fernando Herrera**'s **Udemy** course of:  **Nextjs** <img width="20" heig
 
 ✔️ Next-js from scratch
 
-- Understand how to work with Next + TypeScript
+✔️ Understand how to work with Next + TypeScript
 
 - Different rendering techniques: SSR, SSG, CSR, ISR
 
