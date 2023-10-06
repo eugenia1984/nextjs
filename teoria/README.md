@@ -5,3 +5,5 @@
 - [Instalaciones recomendadas](https://github.com/eugenia1984/nextjs/blob/main/teoria/instalaciones_recomendadas.md)
 
 - [Introducción a Next.js](https://github.com/eugenia1984/nextjs/blob/main/teoria/introduccion.md)
+
+- [TypeScript - Despliegues y Docker](https://github.com/eugenia1984/nextjs/blob/main/teoria/ts_despliegues.md)
