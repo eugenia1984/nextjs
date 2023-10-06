@@ -44,7 +44,10 @@ The **Fernando Herrera**'s **Udemy** course of:  **Nextjs** <img width="20" heig
 
 🔜 I practise with some courses:
 
-✔️ [**Introduction to Next**](https://github.com/eugenia1984/nextjs/tree/main/01-initial-demo): Small exercise for handling generalities of Next.js
+✔️ [**Introduction to Next**](https://github.com/eugenia1984/nextjs/tree/main/01-initial-demo): Small exercise for handling generalities of Next.js, creating a simple website with navbar and 4 pages, using Layouts
+
+![image](https://github.com/eugenia1984/nextjs/assets/72580574/fc6389d6-40e4-45a8-bf88-4799c32fc7bc)
+
 
 ✔️ **PokemonApp**: Small application for managing ISR and SSG
 
