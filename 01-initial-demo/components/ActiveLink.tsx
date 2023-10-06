@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { CSSProperties } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
@@ -7,7 +7,7 @@ interface ActiveLinkPorps {
   to: string
 }
 
-const style = {
+const style: CSSProperties = {
   color: '#0070f3',
   fontWeight: '900'
 }
@@ -15,6 +15,8 @@ const style = {
 export const ActiveLink: React.FC<ActiveLinkPorps> = ({ text, to }) => {
   const { asPath } = useRouter()
   return (
-    <Link href={ to }><span style={ asPath === to ? style : {}  }>{ text }</span></Link>
+    <Link href={ to }>
+      <span style={ asPath === to ? style : undefined }>{ text }</span>
+    </Link>
   )
 }

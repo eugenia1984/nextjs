@@ -14,6 +14,5 @@ export default function About() {
         </div>
       </DarkLayout>
     </MainLayout>
-
   )
 }
