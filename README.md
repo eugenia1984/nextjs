@@ -48,6 +48,7 @@ The **Fernando Herrera**'s **Udemy** course of:  **Nextjs** <img width="20" heig
 
 ![image](https://github.com/eugenia1984/nextjs/assets/72580574/fc6389d6-40e4-45a8-bf88-4799c32fc7bc)
 
+-> Demo [https://mec-next-first-project.vercel.app/](https://mec-next-first-project.vercel.app/)
 
 ✔️ **PokemonApp**: Small application for managing ISR and SSG
 
@@ -61,10 +62,16 @@ The **Fernando Herrera**'s **Udemy** course of:  **Nextjs** <img width="20" heig
 
 ## Technologies 🛠️
 
-- <img width="28" height="28" src="https://img.icons8.com/color/28/nextjs.png" alt="nextjs"/> [**Nextjs**](https://nextjs.org/)
+- <img width="28" height="28" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/28/external-typescript-an-open-source-programming-language-developed-and-maintained-by-microsoft-logo-color-tal-revivo.png" alt="typescript icon"/> [**TypeScript**](https://www.typescriptlang.org/)
+
+- <img width="28" height="28" src="https://img.icons8.com/office/28/react.png" alt="react icon"/> [**React**](https://react.dev/)
+
+- <img width="28" height="28" src="https://img.icons8.com/color/28/nextjs.png" alt="nextjs icon"/> [**Nextjs**](https://nextjs.org/)
 
 - <img width="28" height="28" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/28/external-docker-a-set-of-coupled-software-as-a-service-logo-color-tal-revivo.png" alt="external-docker-a-set-of-coupled-software-as-a-service-logo-color-tal-revivo"/> [**Docker**](https://www.docker.com/)
+
 ---
+
 ## Notes
 
 I appreciate your interest in this Project ⌨️ with ❤️ by [María Eugenia Costa](https://github.com/eugenia1984) 😊 and follow me at [LinkedIn](http://www.linkedin.com/in/maríaeugeniacosta)

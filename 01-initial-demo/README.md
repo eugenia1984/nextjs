@@ -3,7 +3,22 @@
 El primero de los proyectos creados con [**Next.js**](https://nextjs.org/), creado con: [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 
+✔️ [**Introduction to Next**](https://github.com/eugenia1984/nextjs/tree/main/01-initial-demo): una web sencilla con 4 paginas, un navbar para recorrerlas y utlizando Layouts.
+
+![image](https://github.com/eugenia1984/nextjs/assets/72580574/fc6389d6-40e4-45a8-bf88-4799c32fc7bc)
+
+-> Demo [https://mec-next-first-project.vercel.app/](https://mec-next-first-project.vercel.app/)
+
 ---
+
+## Technologies 🛠️
+
+- <img width="28" height="28" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/28/external-typescript-an-open-source-programming-language-developed-and-maintained-by-microsoft-logo-color-tal-revivo.png" alt="typescript icon"/> [**TypeScript**](https://www.typescriptlang.org/)
+
+- <img width="28" height="28" src="https://img.icons8.com/office/28/react.png" alt="react icon"/> [**React**](https://react.dev/)
+
+- <img width="28" height="28" src="https://img.icons8.com/color/28/nextjs.png" alt="nextjs icon"/> [**Nextjs**](https://nextjs.org/)
+
 ---
 
 ### Getting Started
