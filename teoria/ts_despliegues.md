@@ -132,11 +132,37 @@ CMD [ "yarn", "start" ]
 
 4. En comando: `docker build -t nextjs-initial`, `-t` es para crear el tag el lo nombro `nextjs-initial` y así se deja creada la imagen
 
-5. Se a a DockerDesktop, en imagenes y se va a ver la imagen creada, se ve que es super pesada, más de 1GB, no es la version optima, pero es la versión simplificada. Hay una versión optimizada que pesa menos.
+5. Se va a DockerDesktop, en imagenes y se va a ver la imagen creada, se ve que es super pesada, más de 1GB, no es la version optima, pero es la versión simplificada. Hay una versión optimizada que pesa menos.
 
 
+---
 
-- recomendada.Dockerfile
+## Levantar la imagen de Docker
+
+1. Tener el Docker corriendo
+
+2. Estando en elproyecto en consola: 
+
+`docker run --name=next-app -p 3000:3000 nextjs-initial`
+
+-> Le asigno un nombre
+
+-> Le indico el puerto, hago un puente entre el puerto 3000 de mi computadora y el puerto 3000 del contenedor
+
+-> El nombre de la imagen a correr
+
+Y por consola me dice que esta corrienod en el puerto 3000, `http://localhost:3000`
+
+
+- Si quiero hacer mas facil al levantar directamente con localhost en el navegador, lo tengo que correr en el puerto 80:
+
+`docker run --name=next-app -p 80:3000 nextjs-initial`
+
+---
+
+## <img width="20" height="20" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/20/external-docker-a-set-of-coupled-software-as-a-service-logo-color-tal-revivo.png" alt="docker icon"/> 5 - Crear la imagen de Docker siguiendo las prácticas recomendadas por Next
+
+- recomendada.Dockerfile, crea un ambiente de Nodejs para crear la aplicacion y luego lo pasa al runner
 
 ```
 # Fuente: https://github.com/vercel/next.js/blob/canary/examples/with-docker/README.md
@@ -191,12 +217,37 @@ CMD ["node", "server.js"]
 # entre 50 a 150 MB
 ```
 
----
+En consola:
 
-## <img width="20" height="20" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/20/external-docker-a-set-of-coupled-software-as-a-service-logo-color-tal-revivo.png" alt="docker icon"/> 5 - Crear la imagen de Docker siguiendo las prácticas recomendadas por Next
+`docker build -t nextjs-initial .`
+
+`docker run --name=next-app -p 3000:3000 nextjs-initial`
+
+Si da error de que no encuentra el Standalone(hace que la imagen sea mas pequeña) hay que ir a **next.config.js** y agregamos:
+
+```
+experimental: {
+  outputStandaline: true
+}
+```
+
+Y en el **package.json** a la hora de levantar la aplicación debemos configurar el puerto, en el **Script**: `"start": "next start -p ${PORT:=3000}",` de este modo configuro que sea el puerto 3000 en una variable de entorno
+
+- En el DockerDesktop se ve la nueva imagen, de unos 110megas. 
 
 ---
 
 ## <img width="20" height="20" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/20/external-docker-a-set-of-coupled-software-as-a-service-logo-color-tal-revivo.png" alt="docker icon"/>  6 - Correr la aplicación desde Docker Desktop
+
+
+1. Vemos la imagen
+
+2. Le damos a **RUN**
+
+3. Container Name: `next-initial`
+
+4. Ports localhost: `3000` ò `3001`
+
+Si vemos que ya esta voy al navegador y abro el `localhost:3000` o el numero de puerto que le indicamos
 
 ---
