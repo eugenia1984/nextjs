@@ -73,6 +73,124 @@ Una vez que tenemos el **build** con `yarn start` ya nos corre en el servidor de
 
 ## <img width="20" height="20" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/20/external-docker-a-set-of-coupled-software-as-a-service-logo-color-tal-revivo.png" alt="docker icon"/> 4 - Generar una imagen de Docker
 
+- Hoy en día, hay que saber como crear la imagen y dockerizar la aplicación.
+
+- La imagen tiene configurado el servidor, preparado Nodejs, tiene todo preparado para ejecutarse. Y puede tener otros contenedors y todos trabajar como una red.
+
+1. Se crea en la raiz del proyecto un archivo **.dockerignore**, es similar al .gitignore., para poner que archivos no quiero que sean parte de la imagen que voy a terminar tomando. Y adentro:
+
+```
+Dockerfile
+.dockerignore
+node_modules
+npm-debug.log
+README.md 
+.next
+```
+
+2. Me aseguro de tener corriendo DockerDesktop
+
+3. Se crea el archivo **Dockerfile**, que son la serie de comandos que se ejecutan para genrar la imagen
+
+- **simple.Dockerfile**, todos los comandos se ejecutan en secuencia:
+
+```
+FROM node:16-alpine 
+# Linux con Nodejs
+#aca va la version de Nodejs alpine es una version de Linux simplificada
+
+# Creo el directorio app
+RUN mkdir -p /app
+
+# Voy a trabajar en el directorio app
+WORKDIR /app
+
+# Copio de mi proyecto el package.json 
+# y lo pego en la carpeta app, el working directory
+COPY package.json /app
+
+# ejecutamos el yarn install para tenr los modulos en el lado de Linux
+RUN yarn install
+
+# Copio todo y lo pego en la carpeta app, menos lo del .dockerignore
+COPY . /app
+
+# Ejecuto el comando del build
+RUN yarn build
+
+# USER nextjs
+# Para no trabajar con el usuario root, que tiene mayores accesos
+
+# Expongo el puerto 3000, donde se esta ejecutando
+EXPOSE 3000
+
+# Ejecuto la aplicacion, el yarn start que ejecuta el: next start
+CMD [ "yarn", "start" ]
+
+# Super pesada +1GB
+```
+
+4. En comando: `docker build -t nextjs-initial`, `-t` es para crear el tag el lo nombro `nextjs-initial` y así se deja creada la imagen
+
+5. Se a a DockerDesktop, en imagenes y se va a ver la imagen creada, se ve que es super pesada, más de 1GB, no es la version optima, pero es la versión simplificada. Hay una versión optimizada que pesa menos.
+
+
+
+- recomendada.Dockerfile
+
+```
+# Fuente: https://github.com/vercel/next.js/blob/canary/examples/with-docker/README.md
+
+# Install dependencies only when needed
+FROM node:16-alpine AS deps
+# Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
+RUN apk add --no-cache libc6-compat
+WORKDIR /app
+COPY package.json yarn.lock ./
+RUN yarn install --frozen-lockfile
+
+# Rebuild the source code only when needed
+FROM node:16-alpine AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+RUN yarn build
+
+# Production image, copy all the files and run next
+FROM node:16-alpine AS runner
+WORKDIR /app
+
+ENV NODE_ENV production
+
+RUN addgroup -g 1001 -S nodejs
+RUN adduser -S nextjs -u 1001
+
+# You only need to copy next.config.js if you are NOT using the default configuration
+# COPY --from=builder /app/next.config.js ./
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/package.json ./package.json
+
+# Automatically leverage output traces to reduce image size 
+# https://nextjs.org/docs/advanced-features/output-file-tracing
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+USER nextjs
+
+EXPOSE 3000
+
+ENV PORT 3000
+
+# Next.js collects completely anonymous telemetry data about general usage.
+# Learn more here: https://nextjs.org/telemetry
+# Uncomment the following line in case you want to disable telemetry.
+# ENV NEXT_TELEMETRY_DISABLED 1
+
+CMD ["node", "server.js"]
+
+# entre 50 a 150 MB
+```
+
 ---
 
 ## <img width="20" height="20" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/20/external-docker-a-set-of-coupled-software-as-a-service-logo-color-tal-revivo.png" alt="docker icon"/> 5 - Crear la imagen de Docker siguiendo las prácticas recomendadas por Next

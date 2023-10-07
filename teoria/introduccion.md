@@ -88,6 +88,8 @@ Would you like to cutomize the default import alias? No
 > pages
   > contact
      index.tsx
+  > pricing
+     index.tsx   
   > api
   _app.tsx
   _document.tsx
@@ -95,7 +97,10 @@ Would you like to cutomize the default import alias? No
   index.tsx
 > public
 > styles
+.dockerignore
 .eslintrc.json
+.gitignore
+Dockerfile
 next-env.d.ts
 next.config.js
 package.json
@@ -103,6 +108,8 @@ README.md
 tsconfig.json
 yarn.lock
 ```
+
+- **.dockerignore** y **Dockerfile** solo si creamos la imagen de Docker
 
 - **.next**, por defecto esta invisible(oculta). Si al clonar un proyecto no vemos este archivo hay que correr `yarn dev` para inciializarlo y que se cree, sin este archivo no se puede renderizar la aplicación, siempre que estemos en **Desarrollo**, esto no pasa si ya hacemos el **build**
 
