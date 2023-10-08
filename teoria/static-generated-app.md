@@ -59,8 +59,12 @@ const Component = () => <Button>Click me</Button>;
 | Attribute	| Type	| Accepted values	| Description	Default |
 | --------- | ----- | --------------- | ------------------- |
 | theme |	NextUIThemes	| ThemeObject	| Optional custom theme, by default NextUI applies light theme	| - |
-| disableBaseline	| boolean	| true/false	| NextUI automatically includes <CssBaseline/>	| false |
+| disableBaseline	| boolean	| true/false	| NextUI automatically includes ``<CssBaseline/>``	| false |
 
+## `<CssBaseline/>`
+
+Es parecido al normalize para que todos los navegadores webs muestren la pagina igual, y hay que hacerlo en el archivo **_document.tsx**(es de **Next**, para aumentar el HTML y el `<body>`)
+ 
 ---
 
 ### 2 - Flex Layout
@@ -74,6 +78,49 @@ const Component = () => <Button>Click me</Button>;
 
 ### 4 - Next _document
 
+## _document.ts 
+
+- Para tener el control de todo el documento, aca se puede indicar el idioma de la pagina, por ejemplo.
+
+- Va en **pages**.
+
+-  _document.tsx
+
+```typescript
+// pages/_document.js
+
+import React from "react";
+import Document, { Html, Head, Main, NextScript, DocumentContext } from "next/document";
+import { CssBaseline } from "@nextui-org/react";
+
+class MyDocument extends Document {
+
+  static async getInitialProps(ctx: DocumentContext) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return {
+      ...initialProps,
+      styles: React.Children.toArray([initialProps.styles]),
+    };
+  }
+
+  render() {
+    return (
+      <Html lang="en">
+        <Head>{CssBaseline.flush()}</Head>
+        <body>
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
+}
+
+export default MyDocument
+```  
+
+- **DocumentContext** dentro de este context tenemos información de: request, response,
+  
 ---
 
 ### 5 - Navegación
