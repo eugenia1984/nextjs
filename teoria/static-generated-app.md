@@ -14,6 +14,53 @@ Vamos a usar: **getStaticPath** y **getStaticProps** para que trabajen en el biu
 
 - **NextUI** es una librería de componentes estilizados
 
+- En el video utiliza la [version 1](https://v1.nextui.org/docs/guide/getting-started)
+
+- Inicializar: `yarn add @nextui-org/react@1.0.2-beta.2`
+
+- Ahora en **_app.tsx** tengo que hacer cambios:
+
+```Typescript
+import type { AppProps } from 'next/app'
+
+import { NextUIProvider } from '@nextui-org/react'
+
+import '@/styles/globals.css'
+
+export default function App({ Component, pageProps }: AppProps) {
+  return (
+    <NextUIProvider>
+      <Component { ...pageProps } />
+    </NextUIProvider>
+  )
+}
+```
+
+## Using NextUI components
+
+Once NextUI is installed you can use any of the components as follows. NextUI uses tree-shaking so the unused modules will not be included in the bundle during the build process and each component is exported separately.
+
+```typexcript
+import { Button } from '@nextui-org/react';
+
+const Component = () => <Button>Click me</Button>;
+```
+
+## Individual components import
+
+```typescript
+import Button from '@nextui-org/react/button';
+
+const Component = () => <Button>Click me</Button>;
+```
+
+## NextUIProvider Props
+
+| Attribute	| Type	| Accepted values	| Description	Default |
+| --------- | ----- | --------------- | ------------------- |
+| theme |	NextUIThemes	| ThemeObject	| Optional custom theme, by default NextUI applies light theme	| - |
+| disableBaseline	| boolean	| true/false	| NextUI automatically includes <CssBaseline/>	| false |
+
 ---
 
 ### 2 - Flex Layout
