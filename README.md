@@ -36,6 +36,7 @@ The **Fernando Herrera**'s **Udemy** course of:  **Nextjs** <img width="20" heig
 
 ## Demo📦
 
+✔️ [Introduction to Next](https://mec-next-first-project.vercel.app/)
 
 ---
 
