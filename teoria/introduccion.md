@@ -62,6 +62,8 @@ Recomienda ver su video de YouTube [React + TypeScript: Crear aplicación de Rea
 
 - Trabajando con **yarn**: `yarn create next-app`
 
+- Trabajando con **yarn** y **TypeScript**: `yarn create next-app --typescript` -> **la recomendada**
+
 -> Con los recientes cambios que trajo la version **13.4** de NEXT.js (App Router ahora es estable), hubo cambios importantes a tener en cuenta al crear un nuevo proyecto.
 
 Les recomendamos seleccionar las siguientes opciones para crear el proyecto lo más parecido a lo visto en el curso:
