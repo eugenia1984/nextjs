@@ -69,6 +69,8 @@ Es parecido al normalize para que todos los navegadores webs muestren la pagina 
 
 ### 2 - Flex Layout
 
+- Creamos el Layout principal, creamos: `components`/ `layouts`
+  
 ---
 
 ### 3 - Temas de NextUI
