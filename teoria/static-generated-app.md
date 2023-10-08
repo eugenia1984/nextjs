@@ -73,7 +73,68 @@ Es parecido al normalize para que todos los navegadores webs muestren la pagina 
 
 ### 3 - Temas de NextUI
 
+- Pasamos del Theme `light` al `dark`, usando el custom Hook `useTheme()`, similar a MUI.
 
+
+El que sugiere la documentación:
+
+```JavaScript
+// pages/_app.js
+
+// 1. Import `createTheme`
+import { createTheme, NextUIProvider } from "@nextui-org/react"
+
+// 2. Call `createTheme` and pass your custom theme values
+const theme = createTheme({
+  type: "dark", // it could be "light" or "dark"
+  theme: {
+    colors: {
+      primary: '#4ADE7B',
+      secondary: '#F9CB80',
+      error: '#FCC5D8',
+    },
+  }
+})
+
+
+// 3. Pass the new `theme`` to the `NextUIProvider`
+function MyApp({ Component, pageProps }) {
+  return (
+    <NextUIProvider theme={theme}>
+      <Component {...pageProps} />
+    </NextUIProvider>
+  )
+}
+
+export default MyApp
+```
+
+Teniendo ``<NextUiProvider>` puedo especificarle el theme en **MyApp**, pero vamos a crear un nuevo directorio llamado **theme** o **themes** para tenerlo separado (a nivel raiz de la app) y dentro dos archivos:
+
+- `index.ts`, para que sea el archivo de exportacion de todo lo que se encuentre en la carpeta themes
+
+- `darktheme.ts` aca va a estar todo lo que sea referiado al dark theme. Asi si a futuro quiero tener un light theme, me creo un nuevo archivo y ahi puedo switcher entre dark y light theme
+
+-`darktheme.ts`
+```typescript
+import { createTheme } from '@nextui-org/react'
+
+export const darkTheme = createTheme({
+  type: 'dark',
+  theme: {
+    colors: {},
+  }
+})
+```
+
+Y en el `index.ts:
+
+```typescript
+export * from './darktheme'
+```
+
+- Volviendo a `_app.tsx` en `<NextUIProvider theme={darkTheme}>` que lo voy a importar de `import { darkTheme } from '../theme'` y ahora tengo mi aplicación con el fondo negro.
+  
 ---
 
 ### 4 - Next _document
