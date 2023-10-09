@@ -8,7 +8,7 @@ The **Fernando Herrera**'s **Udemy** course of:  **Nextjs** <img width="20" heig
 
 ✔️ Understand how to work with Next + TypeScript
 
-- Different rendering techniques: SSR, SSG, CSR, ISR
+✔️ Different rendering techniques: SSR, SSG, CSR, ISR
 
 - Next Middlewares for APIs and Pages
 
@@ -71,6 +71,9 @@ The **Fernando Herrera**'s **Udemy** course of:  **Nextjs** <img width="20" heig
 
 - [**NextUI**](https://nextui.org/), beautiful, fast and modern React UI library
 
+- [**https://pokeapi.co/**](https://pokeapi.co/)
+
+- [**Axios**](https://axios-http.com/)
 
 - [**https://pokeapi.co/**](https://pokeapi.co/)
   
