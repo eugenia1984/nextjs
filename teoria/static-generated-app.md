@@ -318,18 +318,12 @@ export default Navbar
  ```typescript
 export const getStaticPaths: GetStaticPaths = async (ctx) => {
 
+const pokemons151: string[] = [...Array(151)].map((value, index) => `${ index + 1 }`)
+
   return {
-    paths: [
-      {
-        params: { id: '1' }
-      },
-      {
-        params: { id: '2' }
-      },
-      {
-        params: { id: '3' }
-      }
-    ],
+    paths: pokemons151.map(id => ({
+      params: { id }
+    })),
     fallback: false
   }
 }
