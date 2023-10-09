@@ -70,7 +70,63 @@ Es parecido al normalize para que todos los navegadores webs muestren la pagina 
 ### 2 - Flex Layout
 
 - Creamos el Layout principal, creamos: `components`/ `layouts`
-  
+
+Dentro de `components` creo la carpeta `layouts` y dentro: `Layouts.tsx` e `index.ts`.
+
+-> `index.ts`:
+```
+export * from './Layout'
+```
+
+
+-> `Layout.tsx`
+```typecript
+import React, { FC, ReactNode } from 'react'
+import Head from 'next/head'
+
+interface LayoutProps {
+  children: ReactNode
+  title?: string
+}
+
+export const Layout: FC<LayoutProps> = ({ children, title }) => {
+  return (
+    <>
+      <Head>
+        <title>{ title || 'Pokemon App' }</title>
+        <meta name="author" content="María Eugenia Costa" />
+        <meta name="description" content={ `Información sobre el Pokemon: ${ title }` } />
+        <meta name="keywords" content={ `${ title }, pokemon, pokedex` } />
+      </Head>
+      { /* Navbar*/ }
+      <main>
+        { children }
+      </main>
+    </>
+  )
+}
+
+``` 
+
+-> Entocnes ahora en mi **HomePage** puedo aplicar el Layout:
+
+```typescript
+import React, { FC } from 'react'
+import { Layout } from '../components/layouts'
+import { Button } from '@nextui-org/react'
+
+const HomePage:FC = () => {
+  return (
+    <Layout title='Listado de Pokemons'>
+      <Button color="gradient">Click me</Button>
+    </Layout>
+  )
+}
+
+export default HomePage
+```
+
+
 ---
 
 ### 3 - Temas de NextUI
