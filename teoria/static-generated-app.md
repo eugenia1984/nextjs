@@ -360,7 +360,7 @@ De manera estática en el build se crean las 151 paginas, para que cuando se sol
 
 ---
 
-## <img width="28" height="28" src="https://img.icons8.com/doodle/28/apple-notes.png" alt="apple notes"/>
+## <img width="28" height="28" src="https://img.icons8.com/doodle/28/apple-notes.png" alt="apple notes"/> Tipos de render de la aplicación
 
 - **SSR**: Server-side rendering, la persona/el usuario necesita una información y necesitamos que el servidor cree la página ya que debería actualizar algo.
 
