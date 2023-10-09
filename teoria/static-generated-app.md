@@ -108,7 +108,7 @@ export const Layout: FC<LayoutProps> = ({ children, title }) => {
 
 ``` 
 
--> Entocnes ahora en mi **HomePage** puedo aplicar el Layout:
+-> Entonces ahora en mi **HomePage** puedo aplicar el Layout:
 
 ```typescript
 import React, { FC } from 'react'
