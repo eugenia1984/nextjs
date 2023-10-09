@@ -337,15 +337,17 @@ export default Navbar
 import { GetStaticProps } from 'next'
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const { data } = await  // your fetch function here 
+  const {  data } = await pokeApi.get<PokemonListResponse>('/pokemon/?limit=151')
 
   return {
     props: {
-      
+      pokemons: data.results
     }
   }
 }
 ```
+
+-> Y como usamos TS tipificamos la response, creamos una nuava carpeta **interfaces** y dentro los archivos: `index.ts` y `pokemon-list.ts`(aca voy a hacer la interface de la respuesta de JSON)
 
 ---
 
