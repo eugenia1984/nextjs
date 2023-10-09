@@ -110,7 +110,7 @@ export const Layout: FC<LayoutProps> = ({ children, title }) => {
 
 -> Entonces ahora en mi **HomePage** puedo aplicar el Layout:
 
-```typescript
+```TypeScript
 import React, { FC } from 'react'
 import { Layout } from '../components/layouts'
 import { Button } from '@nextui-org/react'
@@ -174,7 +174,8 @@ Teniendo ``<NextUiProvider>` puedo especificarle el theme en **MyApp**, pero vam
 - `darktheme.ts` aca va a estar todo lo que sea referiado al dark theme. Asi si a futuro quiero tener un light theme, me creo un nuevo archivo y ahi puedo switcher entre dark y light theme
 
 -`darktheme.ts`
-```typescript
+
+```TypeScript
 import { createTheme } from '@nextui-org/react'
 
 export const darkTheme = createTheme({
