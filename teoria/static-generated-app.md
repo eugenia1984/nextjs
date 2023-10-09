@@ -244,6 +244,66 @@ export default MyDocument
 
 ### 5 - Navegación
 
+- Cuando queremos dar estilos a componentes de **NextUI** usamos la propiedad **css** (es como es sx de MUI), ejemplo: `  <Spacer css={ {flex: '1'} } />`
+
+- Como la src d ela imagen que voy a usar no esta en mi proyecto, debo agregar el dominio en **next.config.js**:
+
+```javascript
+const nextConfig = {
+  reactStrictMode: true,
+  images: {
+    domains: ['raw.githubusercontent.com']
+  }
+}
+
+module.exports = nextConfig
+```
+
+- Si quiero agregar estilos a otro componente que no sea de NextUI, lo hago con **Style**.
+
+```
+import { useTheme, Image, Spacer, Text} from '@nextui-org/react'
+import React, { FC } from 'react'
+
+const Navbar: FC = () => {
+  const { theme } = useTheme()
+
+  return (
+    <div style={ {
+      display: 'flex',
+      width: '100%',
+      flexDirection: 'row',
+      alignItems: 'center',
+      justifyContent: 'start',
+      padding: '0px 20px',
+      backgroundColor: theme?.colors.gray800.value
+    } }>
+      <Image
+        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png"
+        alt="icono de la aplicación"
+        width={ 70 }
+        height={ 70}
+      />
+      <Text
+        color='white'
+        h1
+        style={ {
+          fontSize: 'var(--nextui-fontSizes-lg)',
+          lineHeight: 'var(--nextui-lineHeight-lg)'
+        } }>
+        <span>P</span>
+        <span style={ { fontSize: 'var(--nextui-fontSizes-md)' } }>okemon</span>
+      </Text>
+      <Spacer css={ {flex: 1} } />
+      <Text color='white'>Favoritos</Text>
+    </div >
+  )
+}
+
+export default Navbar
+```
+
+
 ---
 
 ### 6 - Parámetros por URL
@@ -256,6 +316,36 @@ export default MyDocument
 
 ### 8 - Next - GetStaticProps
 
+- Solo se hace en el build (cuando hacemos `yarn build`) y se ejecuta del lado del servidor.
+
+- Solo en las **NextPages**
+
+- Las **props** que retorna `getStaticProps` son las **props** de la pagina
+  
+- You should use getStaticProps when:
+
+-The data required to render the page is available at build time ahead of a user’s request.
+
+-The data comes from a headless CMS.
+
+-The data can be publicly cached (not user-specific).
+
+-The page must be pre-rendered (for SEO) and be very fast — getStaticProps generates HTML and JSON files, both of which can be cached by a CDN for performance.
+
+```typescript
+import { GetStaticProps } from 'next'
+
+export const getStaticProps: GetStaticProps = async (ctx) => {
+  const { data } = await  // your fetch function here 
+
+  return {
+    props: {
+      
+    }
+  }
+}
+```
+
 ---
 
 ### 9 - Next - getStaticPaths
@@ -267,4 +357,16 @@ export default MyDocument
 
 De manera estática en el build se crean las 151 paginas, para que cuando se soliciten ya se vean, ya estén listas, en la página dle pokemon muestra el nombre del mismo y los sprites.
 
+---
+
+- **SSR**: Server-side rendering, la persona/el usuario necesita una información y necesitamos que el servidor cree la página ya que debería actualizar algo.
+
+- **SSG**: Static-site generation, generamos todo antes de que la persona haga el request, es lo más rápido. Todas las páginas se crean en el servidor, y al hacer el request ya se manda la página contruida.
+
+- **CSR**: Client-side rendering
+
+- **Dynamic routing**
+
+- **IRS**: Increments Static Regeneration
+    
 ---
