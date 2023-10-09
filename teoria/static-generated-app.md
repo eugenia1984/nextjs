@@ -309,9 +309,43 @@ export default Navbar
 
 ### <img width="28" height="28" src="https://img.icons8.com/doodle/28/apple-notes.png" alt="apple notes"/> 6 - Parámetros por URL
 
+- Vamos a tener el path `pokemon/1`, `pokemon/2`, entre el 1 y el 151, que son los id de cada Pokemon, para poder renderizar la pagina del detalle del pokemon
+
+- `getStaticPaths`, porque la pagina tiene un argumento dinamico, por eso se nombre al archivo `[id].tsx`
+
+- **GetStaticPaths** se ejecuta del lado del servidor. Al tener el fallback **false** si en la URL mandan un id que no esta entre 1 y 152 va a la pagina de error 404.
+
+ ```typescript
+export const getStaticPaths: GetStaticPaths = async (ctx) => {
+
+  return {
+    paths: [
+      {
+        params: { id: '1' }
+      },
+      {
+        params: { id: '2' }
+      },
+      {
+        params: { id: '3' }
+      }
+    ],
+    fallback: false
+  }
+}
+```
+
 ---
 
 ### <img width="28" height="28" src="https://img.icons8.com/doodle/28/apple-notes.png" alt="apple notes"/> 7 - Parámetros estáticos
+
+- Tenemos el hook `useRouter` de Next:
+
+```TypeScript
+const router = useRouter()
+```
+
+Dentro de **router** tenemos el **query** donde vemos en fomra de objeto: `{ id: '1'}`
 
 ---
 
