@@ -8,9 +8,9 @@ Vamos a usar: **getStaticPath** y **getStaticProps** para que trabajen en el biu
 
 ---
 
-## <img width="28" height="28" src="https://img.icons8.com/doodle/28/apple-notes.png" alt="apple notes"/> Temas
+## <img width="38" height="38" src="https://img.icons8.com/doodle/38/apple-notes.png" alt="apple notes"/> Temas
 
-### 1 - Multiples componentes de NextUI
+### <img width="28" height="28" src="https://img.icons8.com/doodle/28/apple-notes.png" alt="apple notes"/> 1 - Multiples componentes de NextUI
 
 - **NextUI** es una librería de componentes estilizados
 
@@ -67,7 +67,7 @@ Es parecido al normalize para que todos los navegadores webs muestren la pagina 
  
 ---
 
-### 2 - Flex Layout
+### <img width="28" height="28" src="https://img.icons8.com/doodle/28/apple-notes.png" alt="apple notes"/> 2 - Flex Layout
 
 - Creamos el Layout principal, creamos: `components`/ `layouts`
 
@@ -129,7 +129,7 @@ export default HomePage
 
 ---
 
-### 3 - Temas de NextUI
+### <img width="28" height="28" src="https://img.icons8.com/doodle/28/apple-notes.png" alt="apple notes"/> 3 - Temas de NextUI
 
 - Pasamos del Theme `light` al `dark`, usando el custom Hook `useTheme()`, similar a MUI.
 
@@ -195,7 +195,7 @@ export * from './darktheme'
   
 ---
 
-### 4 - Next _document
+### <img width="28" height="28" src="https://img.icons8.com/doodle/28/apple-notes.png" alt="apple notes"/> 4 - Next _document
 
 ## _document.ts 
 
@@ -242,7 +242,7 @@ export default MyDocument
   
 ---
 
-### 5 - Navegación
+### <img width="28" height="28" src="https://img.icons8.com/doodle/28/apple-notes.png" alt="apple notes"/> 5 - Navegación
 
 - Cuando queremos dar estilos a componentes de **NextUI** usamos la propiedad **css** (es como es sx de MUI), ejemplo: `  <Spacer css={ {flex: '1'} } />`
 
@@ -306,15 +306,15 @@ export default Navbar
 
 ---
 
-### 6 - Parámetros por URL
+### <img width="28" height="28" src="https://img.icons8.com/doodle/28/apple-notes.png" alt="apple notes"/> 6 - Parámetros por URL
 
 ---
 
-### 7 - Parámetros estáticos
+### <img width="28" height="28" src="https://img.icons8.com/doodle/28/apple-notes.png" alt="apple notes"/> 7 - Parámetros estáticos
 
 ---
 
-### 8 - Next - GetStaticProps
+### <img width="28" height="28" src="https://img.icons8.com/doodle/28/apple-notes.png" alt="apple notes"/> 8 - Next - GetStaticProps
 
 - Solo se hace en el build (cuando hacemos `yarn build`) y se ejecuta del lado del servidor.
 
@@ -348,16 +348,18 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
 ---
 
-### 9 - Next - getStaticPaths
+### <img width="28" height="28" src="https://img.icons8.com/doodle/28/apple-notes.png" alt="apple notes"/> 9 - Next - getStaticPaths
 
 ---
 
-### 10 - Generar 151 páginas de forma estática en tiempo de construcción (build time)
+### <img width="28" height="28" src="https://img.icons8.com/doodle/28/apple-notes.png" alt="apple notes"/> 10 - Generar 151 páginas de forma estática en tiempo de construcción (build time)
 
 
 De manera estática en el build se crean las 151 paginas, para que cuando se soliciten ya se vean, ya estén listas, en la página dle pokemon muestra el nombre del mismo y los sprites.
 
 ---
+
+## <img width="28" height="28" src="https://img.icons8.com/doodle/28/apple-notes.png" alt="apple notes"/>
 
 - **SSR**: Server-side rendering, la persona/el usuario necesita una información y necesitamos que el servidor cree la página ya que debería actualizar algo.
 
