@@ -9,3 +9,5 @@
 - [TypeScript - Despliegues y Docker](https://github.com/eugenia1984/nextjs/blob/main/teoria/ts_despliegues.md)
 
 - [Static Generated App - Pokemon Static](https://github.com/eugenia1984/nextjs/blob/main/teoria/static-generated-app.md)
+
+- - [Pokemon Static - continuacion](https://github.com/eugenia1984/nextjs/blob/main/teoria/pokemon-static.md)
