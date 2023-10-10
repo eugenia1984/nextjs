@@ -313,6 +313,8 @@ export default Navbar
 
 - `getStaticPaths`, porque la pagina tiene un argumento dinamico, por eso se nombre al archivo `[id].tsx`
 
+- En produccion se ejecuta una sola vez en el lado dle servidor, en el build. Siempre debe regresar **string** la función.
+ 
 - **GetStaticPaths** se ejecuta del lado del servidor. Al tener el fallback **false** si en la URL mandan un id que no esta entre 1 y 152 va a la pagina de error 404.
 
  ```typescript
@@ -345,7 +347,7 @@ Dentro de **router** tenemos el **query** donde vemos en fomra de objeto: `{ id:
 
 ### <img width="28" height="28" src="https://img.icons8.com/doodle/28/apple-notes.png" alt="apple notes"/> 8 - Next - GetStaticProps
 
-- Solo se hace en el build (cuando hacemos `yarn build`) y se ejecuta del lado del servidor.
+- Solo se hace en el build (cuando hacemos `yarn build`) y se ejecuta del lado del servidor. Cuando estamos en modo `desarrollo` se ejecuta cada vez que se renderiza, pero una vez que relaizamos le build en produccion se ejecutará una única vez.
 
 - Solo en las **NextPages**
 
@@ -394,7 +396,7 @@ De manera estática en el build se crean las 151 paginas, para que cuando se sol
 
 - **SSR**: Server-side rendering, la persona/el usuario necesita una información y necesitamos que el servidor cree la página ya que debería actualizar algo.
 
-- **SSG**: Static-site generation, generamos todo antes de que la persona haga el request, es lo más rápido. Todas las páginas se crean en el servidor, y al hacer el request ya se manda la página contruida.
+- **SSG**: Static-site generation, generamos todo antes de que la persona haga el request, es lo más rápido. Todas las páginas se crean en el servidor, y al hacer el request ya se manda la página contruida. Aunque sea generada de manera estatica se puede usar todo lo de React y hacer actualizaciones.
 
 - **CSR**: Client-side rendering
 
