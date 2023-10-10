@@ -20,5 +20,20 @@ En la página de cada Pokemon quiero que al hacer click en el botón **Guardar e
 
 Como puedo tener más de un favorito, la idea es guardarlo en un array.
 
+Hay que tener en cuenta que cuando se renderiza del lado del servidor **no** tenemos ni ^^localStorage** ni **window**, si no se considera hay errores, posibles soluciones:
+
+```TypeScript
+/**
+ * Retorna true si existe el id del Pokemon en favoritos.
+ * Retorna false si no existe el id dle Pokemon en favoritos
+ */
+const existInFavorites = (id: number): boolean => {
+  if (typeof window === 'undefined') return false // porque window no esta en Nodejs
+
+  const favorites: number[] = JSON.parse( localStorage.getItem('favorites') || '[]')
+
+  return favorites.includes(id)
+}
+```
 
 ---
