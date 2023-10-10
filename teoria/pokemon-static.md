@@ -20,7 +20,7 @@ En la página de cada Pokemon quiero que al hacer click en el botón **Guardar e
 
 Como puedo tener más de un favorito, la idea es guardarlo en un array.
 
-Hay que tener en cuenta que cuando se renderiza del lado del servidor **no** tenemos ni ^^localStorage** ni **window**, si no se considera hay errores, posibles soluciones:
+Hay que tener en cuenta que cuando se renderiza del lado del servidor **no** tenemos ni **localStorage** ni **window**, si no se considera hay errores, posibles soluciones:
 
 ```TypeScript
 /**
