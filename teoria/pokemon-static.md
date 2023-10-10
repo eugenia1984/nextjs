@@ -18,4 +18,7 @@ Por ejemplo si en el Front usamos el **localStorage** en el Back tenemos Nodejs 
 
 En la página de cada Pokemon quiero que al hacer click en el botón **Guardar en favoritos** puede ir agregando el Pokemon en la lista de favoritos para luego verlo en la pagina `/favorites`
 
+Como puedo tener más de un favorito, la idea es guardarlo en un array.
+
+
 ---
