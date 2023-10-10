@@ -40,8 +40,34 @@ const existInFavorites = (id: number): boolean => {
 
 ## <img width="30" height="30" src="https://img.icons8.com/emoji/30/memo-emoji.png" alt="memo emoji"/>  Librerías externas - Canvas Confetti
 
-- instalamos Canvas - Confetti : `yarn add canvas-confetti`
+- Instalamos Canvas - Confetti : `yarn add canvas-confetti`
   
 - Como estamos usando TypeScript, debemos agregar el tipado: `$ yarn add -D @types/canvas-confetti`
   
+---
+
+
+## <img width="30" height="30" src="https://img.icons8.com/emoji/30/memo-emoji.png" alt="memo emoji"/>   Tarea sobre contenido estático
+
+1. Crear una página que se llame ```PokemonByNamePage``` en este path:
+```
+pages/name/[name].tsx
+```
+
+2. Deben de generar de manera estática (getStaticProps y getStaticPaths) 151 páginas que leeran el parámetro ```name``` por el url.
+
+3. El parámetro name, lo usarán para traer la información de ese pokémon por NOMBRE (no por ID)
+
+4. Realizar el build de producción ```yarn build``` y confirmar que tengan las nuevas 151 páginas dentro del servidor/pages/name
+
+
+### Tips:
+* Obtener información del pokémon por nombre:
+https://pokeapi.co/api/v2/pokemon/ditto
+
+* Traer los 151 pokémons
+https://pokeapi.co/api/v2/pokemon?limit=151
+
+* El componente de PokemonByNamePage es idéntico al de pokémon por id ```[id].tsx```, es decir recibe el mismo pokémon como argumento.
+
 ---
