@@ -38,7 +38,7 @@ const existInFavorites = (id: number): boolean => {
 
 ---
 
-## <img width="30" height="30" src="https://img.icons8.com/emoji/30/memo-emoji.png" alt="memo emoji"/>  Librerís externas - Canvas Confetti
+## <img width="30" height="30" src="https://img.icons8.com/emoji/30/memo-emoji.png" alt="memo emoji"/>  Librerías externas - Canvas Confetti
 
 
 ---
