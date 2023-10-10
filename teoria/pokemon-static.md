@@ -40,5 +40,8 @@ const existInFavorites = (id: number): boolean => {
 
 ## <img width="30" height="30" src="https://img.icons8.com/emoji/30/memo-emoji.png" alt="memo emoji"/>  Librerías externas - Canvas Confetti
 
-
+- instalamos Canvas - Confetti : `yarn add canvas-confetti`
+  
+- Como estamos usando TypeScript, debemos agregar el tipado: `$ yarn add -D @types/canvas-confetti`
+  
 ---
