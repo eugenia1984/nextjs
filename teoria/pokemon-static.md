@@ -72,7 +72,7 @@ https://pokeapi.co/api/v2/pokemon?limit=151
 
 ---
 
-##  <img width="30" height="30" src="https://img.icons8.com/emoji/30/memo-emoji.png" alt="memo emoji"/> Open GRaph
+##  <img width="30" height="30" src="https://img.icons8.com/emoji/30/memo-emoji.png" alt="memo emoji"/> Open Graph
 
 [Link](https://ahrefs.com/blog/open-graph-meta-tags/)
 
