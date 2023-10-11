@@ -79,9 +79,13 @@ The **Fernando Herrera**'s **Udemy** course of:  **Nextjs** <img width="20" heig
   
 - <img width="28" height="28" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/28/external-docker-a-set-of-coupled-software-as-a-service-logo-color-tal-revivo.png" alt="external-docker-a-set-of-coupled-software-as-a-service-logo-color-tal-revivo"/> [**Docker**](https://www.docker.com/)
 
-## Tools
+
+- [**Canvas Confetti**](https://www.npmjs.com/package/canvas-confetti)
+
+## Tools: 
 
 - [**quicktype.io**](https://quicktype.io/typescript), instantly generate TypeScript interfaces from JSON.
+
 ---
 
 ## Notes
