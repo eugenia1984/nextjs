@@ -44,4 +44,53 @@ Tengo la necesidad de agregar una nueva página, luego del build time, en produc
 
 -> Necesitamos cambiar la parte del `fallback`, al tenerla en `false` siempre da error 4040 si la web aun no existe. Hay que cambiar : `fallback: 'blocking'`
 
+- Vuelvo a `getPokemonInfo.tsx`:
+
+```TypeScript
+import { pokeApi } from '../api'
+import { Pokemon } from '../interfaces'
+
+export const getPokemonInfo = async (nameOrId: string) => {
+
+  try {
+    const { data } = await pokeApi.get<Pokemon>(`/pokemon/${ nameOrId }`)
+
+    return {
+      id: data.id,
+      name: data.name,
+      sprites: data.sprites
+    }
+  } catch (error) {
+    return null
+  }
+
+}
+```
+
+Y vuelvo a `[id].tsx`
+
+```typescript
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const { id } = params as { id: string }
+  const pokemon = await getPokemonInfo(id)
+
+{/* Si el pokemon no existe voy a redirigir a la Home */}
+  if (!pokemon) { 
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false
+      }
+    }
+  }
+
+  return {
+    props: {
+      pokemon
+    },
+    revalidate: 86400, 
+  }
+}
+```
+
 ---
