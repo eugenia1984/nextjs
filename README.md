@@ -38,6 +38,8 @@ The **Fernando Herrera**'s **Udemy** course of:  **Nextjs** <img width="20" heig
 
 ✔️ [Introduction to Next](https://mec-next-first-project.vercel.app/)
 
+✔️ [PokemonApp](https://next-pokemon-static-maria-eugenias-projects.vercel.app/)
+
 ---
 
 ## Features📢
@@ -52,6 +54,20 @@ The **Fernando Herrera**'s **Udemy** course of:  **Nextjs** <img width="20" heig
 -> Demo [https://mec-next-first-project.vercel.app/](https://mec-next-first-project.vercel.app/)
 
 ✔️ **PokemonApp**: Small application for managing ISR and SSG
+
+Home Page:
+
+![image](https://github.com/eugenia1984/nextjs/assets/72580574/235569c2-1231-4b88-be3e-dfacbc69d069)
+
+Pokemon detail:
+
+![image](https://github.com/eugenia1984/nextjs/assets/72580574/c54461c8-a9b3-4b9f-9aa7-506705ea556c)
+
+Favorites:
+
+![image](https://github.com/eugenia1984/nextjs/assets/72580574/4d51ee55-17f6-4988-bdd2-55ad64bc9b1a)
+
+-> Demo: [https://next-pokemon-static-maria-eugenias-projects.vercel.app/](https://next-pokemon-static-maria-eugenias-projects.vercel.app/)
 
 ✔️ **OpenJira**: Intermediate application for task management and SSR
 
