@@ -45,7 +45,7 @@ The **Fernando Herrera**'s **Udemy** course of:  **Nextjs** <img width="20" heig
 ## Features📢
 
 
-🔜 I practise with some courses:
+🔜 I practise with some projects:
 
 ✔️ [**Introduction to Next**](https://github.com/eugenia1984/nextjs/tree/main/01-initial-demo): Small exercise for handling generalities of Next.js, creating a simple website with navbar and 4 pages, using Layouts
 
