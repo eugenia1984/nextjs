@@ -11,3 +11,5 @@
 - [Static Generated App - Pokemon Static](https://github.com/eugenia1984/nextjs/blob/main/teoria/static-generated-app.md)
 
 - [Pokemon Static - continuacion](https://github.com/eugenia1984/nextjs/blob/main/teoria/pokemon-static.md)
+
+- [Incremental Static Regeneration (ISR) e Incremental Static Generation (ISG)](https://github.com/eugenia1984/nextjs/blob/main/teoria/isr_isg.md)
