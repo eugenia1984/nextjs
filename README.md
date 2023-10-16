@@ -18,13 +18,13 @@ The **Fernando Herrera**'s **Udemy** course of:  **Nextjs** <img width="20" heig
 
 - Material UI
 
-- Introduction to Next UI
+✔️ Introduction to Next UI
 
-- cookies
+✔️ cookies
 
 - Payments with PayPal and credit cards
 
-- Multi-platform deployments
+✔️ Multi-platform deployments
 
 ---
 
