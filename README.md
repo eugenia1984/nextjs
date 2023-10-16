@@ -12,7 +12,7 @@ The **Fernando Herrera**'s **Udemy** course of:  **Nextjs** <img width="20" heig
 
 - Next Middlewares for APIs and Pages
 
-- Dynamic and static routes
+✔️ Dynamic and static routes
 
 - Next Auth
 
