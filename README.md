@@ -10,7 +10,7 @@ The **Fernando Herrera**'s **Udemy** course of:  **Nextjs** <img width="20" heig
 
 ✔️ Different rendering techniques: SSR, SSG, CSR, ISR
 
-- Next Middlewares for APIs and Pages
+✔️ Next Middlewares for APIs and Pages
 
 ✔️ Dynamic and static routes
 
