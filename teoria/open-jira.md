@@ -26,15 +26,20 @@ Simulando el Dashboard de Jira, para manejar un CRUD (Create, Read, Update, Dele
 
 ### <img width="30" height="30" src="https://img.icons8.com/clouds/30/note.png" alt="note"/> 2 - Material UI
 
-- Instalamos MaterialUI con la configuración por defecto con emotion: `yarn add @mui/material @emotion/react @emotion/styled`
+- Instalamos MaterialUI con la configuración por defecto con emotion:
+```BASH
+yarn add @mui/material @emotion/react @emotion/styled
+```
 
 - Configuramos para utilizar su feunte por defecto: **Roboto**:
 
-`yarn add @fontsource/roboto`
+```BASH
+yarn add @fontsource/roboto
+```
 
 Y luego importamos lo que necesitamos:
 
-```
+```HTML
 import '@fontsource/roboto/300.css';
 import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
