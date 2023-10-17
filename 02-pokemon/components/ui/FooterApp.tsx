@@ -9,19 +9,19 @@ const FooterApp: FC = () => {
       style={ {
         display: 'flex',
         width: '100%',
-        flexDirection: 'row',
+        flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
         padding: '2rem 1rem',
         backgroundColor: theme?.colors.gray800.value
       } }
     >
-      { new Date().getFullYear() }  All rights reserved - Created by
+      &copy;{ new Date().getFullYear() }  All rights reserved - Created by
       <a
         href="https://www.linkedin.com/in/mar%C3%ADaeugeniacosta/" target="_blank"
         style={ {
           textTransform: 'none',
-          marginLeft: '12px',
+          marginLeft: '6px',
           color: '#fff',
           fontWeight: '800'
         } }

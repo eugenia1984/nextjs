@@ -1,6 +1,6 @@
 import React from 'react'
 import { NextPage, GetStaticProps, GetStaticPaths } from 'next'
-import { Card, Grid, Text } from '@nextui-org/react'
+import {  Grid } from '@nextui-org/react'
 import { Layout } from '../../components/layouts'
 import { pokeApi } from '../../api'
 import { Pokemon, PokemonListResponse } from '../../interfaces'
@@ -50,28 +50,47 @@ export const getStaticPaths: GetStaticPaths = async (ctx) => {
     paths: pokemonsNames.map(name => ({
       params: { name }
     })),
-    fallback: false
+    fallback: 'blocking'
   }
 }
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { name } = params as { name: string }
-  const { data } = await pokeApi.get<Pokemon>(`/pokemon/${ name }`)
+  const getPokemonByName = async (name: string) => { 
+    try {
+      const { data } = await pokeApi.get<Pokemon>(`/pokemon/${ name }`)
+      return {
+          abilities: data.abilities,
+          base_experience: data.base_experience,
+          height: data.height,
+          id: data.id,
+          name: data.name,
+          species: data.species,
+          sprites: data.sprites,
+          stats: data.stats,
+          types: data.types,
+          weight: data.weight
+      }
+    } catch (error) { 
+      return null
+    }
+  }
+  
+  const pokemon = await getPokemonByName(name)
+
+  if (!pokemon) { 
+    return {
+      redirect: {
+        destination: '/',
+        permanent: false
+      }
+    }
+  }
 
   return {
     props: {
-      pokemon: {
-        abilities: data.abilities,
-        base_experience: data.base_experience,
-        height: data.height,
-        id: data.id,
-        name: data.name,
-        species: data.species,
-        sprites: data.sprites,
-        stats: data.stats,
-        types: data.types,
-        weight: data.weight
-      }
+      pokemon,
+      revalidate: 8640,
     }
   }
 }
