@@ -95,6 +95,7 @@ Favorites:
   
 - <img width="28" height="28" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/28/external-docker-a-set-of-coupled-software-as-a-service-logo-color-tal-revivo.png" alt="external-docker-a-set-of-coupled-software-as-a-service-logo-color-tal-revivo"/> [**Docker**](https://www.docker.com/)
 
+- [<img width="28" height="28" src="https://img.icons8.com/color/28/material-ui.png" alt="material-ui"/> **MaterialUI**](https://mui.com/material-ui/)
 
 - [**Canvas Confetti**](https://www.npmjs.com/package/canvas-confetti)
 
