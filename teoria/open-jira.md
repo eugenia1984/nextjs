@@ -44,7 +44,7 @@ import '@fontsource/roboto/700.css';
 
 O sino directamente con Google Fonts:
 
-```
+```HTML
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
@@ -53,7 +53,7 @@ O sino directamente con Google Fonts:
 />
 ```
 
-```
+```HTML
 <link
   rel="stylesheet"
   href="https://fonts.googleapis.com/icon?family=Material+Icons"
