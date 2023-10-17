@@ -16,7 +16,7 @@ The **Fernando Herrera**'s **Udemy** course of:  **Nextjs** <img width="20" heig
 
 - Next Auth
 
-- Material UI
+✔️ Material UI
 
 ✔️ Introduction to Next UI
 
