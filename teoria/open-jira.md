@@ -66,6 +66,50 @@ O sino directamente con Google Fonts:
 
 ### <img width="30" height="30" src="https://img.icons8.com/clouds/30/note.png" alt="note"/> 3 - Temas de Material UI
 
+- En la raiz del proyecto creo la careta `themes`, con el `index.ts` y los themes: `ligh-theme.ts` y `dark-theme.ts`.
+
+Dejoe el ejemplo de uno:
+
+```TypeScript
+import { createTheme } from '@mui/material'
+import { red } from '@mui/material/colors'
+
+export const darkTheme = createTheme({
+  palette: {
+    mode: 'dark',
+    secondary: {
+      main: '#19874b'
+    },
+    error: {
+      main: red.A400
+    }
+  },
+})
+```
+
+- En `_app.ts` utilizo el `ThemeProvider` con el `theme`. 
+
+- Siempre recordar agregar ` <CssBaseline />`
+
+```TypeScript
+import type { AppProps } from 'next/app'
+import { CssBaseline, ThemeProvider } from '@mui/material'
+import { lightTheme, darkTheme } from '../themes'
+import '@/styles/globals.css'
+
+const App = ({ Component, pageProps }: AppProps) => {
+  return (
+    <ThemeProvider theme={ darkTheme }>
+      <CssBaseline />
+      <Component {...pageProps} />
+    </ThemeProvider>
+  )
+}
+
+export default App
+
+```
+
 ---
 
 ### <img width="30" height="30" src="https://img.icons8.com/clouds/30/note.png" alt="note"/> 4 - Creación de snippets
