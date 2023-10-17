@@ -58,8 +58,8 @@ O sino directamente con Google Fonts:
   rel="stylesheet"
   href="https://fonts.googleapis.com/icon?family=Material+Icons"
 />
-``
-`
+```
+
 - Si usamos los iconos: `yarn add @mui/icons-material`
   
 ---
