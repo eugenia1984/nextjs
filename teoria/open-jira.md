@@ -1,4 +1,4 @@
-# OpenJira - Ejercicios con MaterialUI
+# <img width="48" height="48" src="https://img.icons8.com/color/48/jira.png" alt="jira"/> OpenJira - Ejercicios con MaterialUI
 
 Simulando el Dashboard de Jira, para manejar un CRUD (Create, Read, Update, Delete), y permitir:
 
@@ -18,21 +18,21 @@ Simulando el Dashboard de Jira, para manejar un CRUD (Create, Read, Update, Dele
 
 ---
 
-## Temas
+## <img width="40" height="40" src="https://img.icons8.com/clouds/40/note.png" alt="note"/> Temas
 
-### 1 - Manejo del contexto
-
----
-
-### 2 - Material UI
+### <img width="30" height="30" src="https://img.icons8.com/clouds/30/note.png" alt="note"/> 1 - Manejo del contexto
 
 ---
 
-### 3 - Temas de Material UI
+### <img width="30" height="30" src="https://img.icons8.com/clouds/30/note.png" alt="note"/> 2 - Material UI
 
 ---
 
-### 4 - Creación de snippets
+### <img width="30" height="30" src="https://img.icons8.com/clouds/30/note.png" alt="note"/> 3 - Temas de Material UI
+
+---
+
+### <img width="30" height="30" src="https://img.icons8.com/clouds/30/note.png" alt="note"/> 4 - Creación de snippets
 
 
 ---
