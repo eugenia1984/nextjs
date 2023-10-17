@@ -87,7 +87,7 @@ Favorites:
 
 - [**NextUI**](https://nextui.org/), beautiful, fast and modern React UI library
 
-- [**https://pokeapi.co/**](https://pokeapi.co/)
+- [<img width="28" height="28" src="https://img.icons8.com/color/28/pokemon.png" alt="pokemon"/> **https://pokeapi.co/**](https://pokeapi.co/)
 
 - [**Axios**](https://axios-http.com/)
 
