@@ -22,6 +22,8 @@ Simulando el Dashboard de Jira, para manejar un CRUD (Create, Read, Update, Dele
 
 ### <img width="30" height="30" src="https://img.icons8.com/clouds/30/note.png" alt="note"/> 1 - Manejo del contexto
 
+Un **estado global** para poder compartir entre componentes, sin necesidad de hacer **prop drilling**.
+
 ---
 
 ### <img width="30" height="30" src="https://img.icons8.com/clouds/30/note.png" alt="note"/> 2 - Material UI
