@@ -121,5 +121,38 @@ export default App
 
 ### <img width="30" height="30" src="https://img.icons8.com/clouds/30/note.png" alt="note"/> 4 - Creación de snippets
 
+Para no tener que estar siempre tipeando la estructura del Context:
+
+```Typescript
+import { createContext } from 'react'
+
+export interface ContextProps { 
+  sideMenuOpen: boolean
+}
+
+export const UIContext = createContext({} as ContextProps )
+```
+
+
+`Ctrl + Shift + P` -> `use snippets` -> `typescrip react`
+
+```
+{
+  "React custom context": {
+    "prefix": "reactcontext",
+    "body": [
+         "import { createContext } from 'react'",
+         "",
+         "export interface ContextProps {",
+         "     sideMenuOpen: boolean",
+         "}",
+          "",
+   "export const UIContext = createContext({} as ContextProps )",
+    ],
+    "description": "React custom context with props"
+  }
+}
+```
 
 ---
+
