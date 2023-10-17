@@ -26,6 +26,8 @@ Simulando el Dashboard de Jira, para manejar un CRUD (Create, Read, Update, Dele
 
 ### <img width="30" height="30" src="https://img.icons8.com/clouds/30/note.png" alt="note"/> 2 - Material UI
 
+- Instalamos MaterialUI: `yarn add @mui/material @emotion/react @emotion/styled`
+   
 ---
 
 ### <img width="30" height="30" src="https://img.icons8.com/clouds/30/note.png" alt="note"/> 3 - Temas de Material UI
